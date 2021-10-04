@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build' ,'-t', 'gcr.io/donexp/don-mvp-actions:$SHORT_SHA', '.','-f','dev.Dockerfile']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/shopdon-1614963409256/don-mvp-actions:$SHORT_SHA']
+  args: ['push','gcr.io/donexp/don-mvp-actions:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'don-mvp-actions', '--region=us-central1', '--platform=managed', '--image=gcr.io/shopdon-1614963409256/don-actions:$SHORT_SHA']
+  args: ['run', 'deploy', 'don-mvp-actions', '--region=us-central1', '--platform=managed', '--image=gcr.io/donexp/don-actions:$SHORT_SHA']
