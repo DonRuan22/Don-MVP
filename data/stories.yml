@@ -1,0 +1,90 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: happy path promotion
+  steps:
+  - intent: promotions
+  - action: utter_promotion
+  
+- story: happy path questions_size
+  steps:
+  - intent: questions_size
+  - action: utter_questions_size
+  
+- story: happy path verify_size
+  steps:
+  - intent: verify_size
+  - action: utter_verify_size
+  
+- story: happy path claims
+  steps:
+  - intent: claims
+  - action: utter_claims
+  
+- story: happy path faq_voucher
+  steps:
+  - intent: faq_voucher_exchange
+  - action: utter_faq_exchange
+
+- story: happy path member_shop
+  steps:
+  - intent: faq_member
+  - action: utter_faq_member
+
+- story: happy path faq_location
+  steps:
+  - intent: faq_location
+  - action: utter_faq_location
+  
+- story: happy path search_model
+  steps:
+  - intent: buy_shoe
+  - action: act_search_model
+  
+- story: happy path search_info
+  steps:
+  - intent: search_info
+  - action: act_search_info
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_shoe
+    entities:
+    - brand: Nike
+    - model: Shoes
+  - slot_was_set:
+    - brand: Nike
+  - slot_was_set:
+    - model: Shoes
+  - action: act_search_model

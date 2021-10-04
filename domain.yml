@@ -1,0 +1,78 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- buy_shoe
+- promotions
+- claims
+- questions_size
+- verify_size
+- faq_voucher_exchange
+- faq_member
+- faq_location
+- search_info
+entities:
+- brand
+- categorie
+- model
+- price-cat
+- size
+slots:
+  brand:
+    type: text
+    influence_conversation: true
+  model:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_buy:
+  - text: Ok this is the most recommended shoe to you
+  utter_promotion:
+  - text: This is the promotions
+  utter_claims:
+  - text: your claim was registered
+  utter_questions_size:
+  - text: 'the available sizes is:'
+  utter_verify_size:
+  - text: 'We are verifing if this size is available:'
+  utter_faq_exchange:
+  - text: You can use an available exchange voucher by following the standard purchase procedure (See here how to make a purchase from the Nike Online Store). The only difference will be in the payment step. When you reach this last step before finalizing the order, you will be able to see the payment option Vale Trocas on the left side menu. By clicking on this option, you can use the amount available in exchanges as a form of full or partial payment, that is, you can pay your order in full with the exchange voucher (if the value is enough) or pay part of the order with the voucher , complementing the payment of the excess amount with credit card or bank slip.
+  utter_faq_member:
+  - text: |-
+      Nike Membership is free. To become a Nike member, it's simple and quick, just follow the steps below: Click Login/Sign Up in the top right menu in nike web site. Once you open the “Your Account for Nike Everything” screen, scroll to the bottom and click on “Join Us”. Fill in all the requested data or login with facebook and click on Join Us. There, you are now part of the team and are officially a Nike member. Your exclusive benefits are these below: Exclusive experiences Every 3 months, we celebrate our members with Nike Member Days. We've gathered special benefits and surprises with the launch of the most coveted products, gifts and access to Nike Experiences. A gift to you 
+       At the beginning of their birthday month, members get a special discount coupon.
+      Exclusive Products
+      Members-only access products.
+      Early Access
+      Know and guarantee the launches, offers and exclusive collections before everyone else.
+      Shopping as it should be
+      Free shipping for Nike members (following shipping policy) and free exchanges (following return and return policy).
+      Training Rewards
+      Additional monthly discount on products on offer for all members who remain active on the NRC and NTC*
+  utter_faq_location:
+  - text: we have stores at Brazópolis, São José dos Campos and São Paulo
+actions:
+- act_search_model
+- act_search_info
+- utter_greet

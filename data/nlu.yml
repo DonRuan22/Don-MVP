@@ -1,0 +1,143 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: buy_shoe
+  examples: |
+    - I want to buy a [nike](brand) shoe
+    - I want to buy an [adidas](brand) shoe
+    - I want to buy a shoe
+    - I want to buy a [sandal](brand)
+    - i want a [nike](brand) [newco](model) model [size 50](size)
+    - i want a [cheap](price-cat) [running shoe](categorie)
+    - I want a good [walking](categorie) shoes
+    - I want a good [Tenis](categorie) shoes
+    - i want a [nike](brand) [newco](model) model [size 50](size)
+    - i want a [nike](brand) [shoes](model) model
+    - i'm looking for [nike](brand) [shot](model) tennis
+    - I need a [Nike](brand) [Downshifter](model) shoe
+    - help me to find a [adidas](brand) [topper](model)
+    - help me to find a [Nike](brand) [Shoes](model)
+    - I am looking for a [Nike](brand) [Shoes](model)
+    - i'm in need of a [nike](brand) [space hippie](model) sneaker
+    - i'm in need of a [nike](brand) [Alphafly next](model) sneaker
+
+- intent: promotions
+  examples: |
+    - what are the new promotions?
+    - what are the new offers?
+    - what are the shoes on sale?
+    - I want a shoe that is on sale
+- intent: claims
+  examples: |
+    - I bought a shoe that I didn't like
+    - I want to make a complaint
+- intent: questions_size
+  examples: |
+    - what size do you have [nike](brand) shoes?
+    - what size do you have shoes?
+- intent: verify_size
+  examples: |
+    - Do you have adidas [c](model) model [number 40](size) shoes?
+    - Do you have nike [newcase](model) model [size 35](size) shoes?
+- intent: faq_voucher_exchange
+  examples: |
+    - How can I use my exchange voucher?
+    - what is the exchange coupon?
+    - when should I use the exchange coupon?
+- intent: faq_member
+  examples: |
+    - What is being a Nike member and what are the benefits?
+    - What is it like to be a Nike member?
+    - What are the benefits of being a Nike member?
+- intent: faq_location
+  examples: |
+    - where are nike stores?
+    - where are your stores?
+- intent: search_info
+  examples: |
+    - I would like to know more about tennis [Shoes](model) [Nike]
+    - I would like to know more about tennis [shocks](model) [Adidas]
+    - I want more information about [Shoes Test](model) [Nike]
+    
